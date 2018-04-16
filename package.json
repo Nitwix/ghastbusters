@@ -1,0 +1,22 @@
+{
+  "name": "ghastbusters",
+  "version": "1.0.0",
+  "description": "Projet de fin d'année d'OC info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nitwix/ghastbusters.git"
+  },
+  "author": "Nina Ionescu & Niels Lachat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nitwix/ghastbusters/issues"
+  },
+  "homepage": "https://github.com/Nitwix/ghastbusters#readme",
+  "dependencies": {
+    "phaser-ce": "^2.10.3"
+  }
+}
