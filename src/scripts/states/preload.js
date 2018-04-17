@@ -7,6 +7,7 @@ preloadState.preload = function(){
 
     game.load.tilemap("map","assets/map/map.json",null,Phaser.Tilemap.TILED_JSON);
     game.load.spritesheet("Netherrack","assets/sprites/Netherrack.png",32,32);
+    game.load.image("background","assets/sprites/background.png");
 }
 
 preloadState.create = function(){
