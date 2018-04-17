@@ -1,0 +1,10 @@
+body{
+    background-image: url("../assets/site/bg_obsi.jpg");
+    background-size: 32px 32px;
+
+    color: white;
+}
+
+td{
+    border: solid #c8e4b3 1px;
+}
