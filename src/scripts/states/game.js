@@ -12,19 +12,20 @@ var gameState = {
 
         game.physics.enable(player,Phaser.Physics.ARCADE);
         player.body.collideWorldBounds = true;
-        player.body.bounce.y = 0.2;
-        player.body.gravity.y = 300;
+        // player.body.bounce.y = 0.2;
+        player.body.gravity.y = 600;
+        player.body.mass = 300;
 
         game.camera.follow(player);
 
 
-        player.customProps = {};
+        player.data.animationSpeed = 6;
+        player.data.xVelocity = 500;
+        player.data.yVelocity = 500;
+        player.body.maxVelocity = 200;
 
-        player.customProps.animationSpeed = 6;
-        player.customProps.speed = 300;
-
-        player.animations.add("walkLeft", [4,5,6,7], player.customProps.animationSpeed);
-        player.animations.add("walkRight", [8,9,10,11], player.customProps.animationSpeed);
+        player.animations.add("walkLeft", [4,5,6,7], player.data.animationSpeed);
+        player.animations.add("walkRight", [8,9,10,11], player.data.animationSpeed);
 
 
         map = game.add.tilemap("map"); //çA marchce pas la map. voir le nom des tilesets + collisions
@@ -41,25 +42,28 @@ var gameState = {
         player.body.velocity.x=0;
 
         if(input.left.isDown){
-            player.body.velocity.x = -player.customProps.speed;
-            player.animations.play("walkLeft",player.customProps.animationSpeed,true);
-
-            return;
+            player.body.velocity.x = -player.data.xVelocity;
+            player.animations.play("walkLeft",player.data.animationSpeed,true);
+            // return;
         }
-
-        if(input.up.isDown && player.body.blocked.down){
-            player.body.velocity.y = -player.customProps.speed;
-            return;
-        }
-
 
         if(input.right.isDown){
-            player.body.velocity.x = player.customProps.speed;
-            player.animations.play("walkRight",player.customProps.animationSpeed,true);
+            player.body.velocity.x = player.data.xVelocity;
+            player.animations.play("walkRight",player.data.animationSpeed,true);
+            // return;
+        }
+
+        if((input.up.isDown || input.space.isDown) && player.body.blocked.down){
+            player.body.velocity.y = -player.data.yVelocity;
             return;
         }
 
-        else{
+        if(input.down.isDown){
+            player.body.velocity.y = player.data.yVelocity;
+            return;
+        }
+
+        if(player.body.velocity.x === 0){
             player.animations.stop(null,true);
         }
 

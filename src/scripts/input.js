@@ -8,5 +8,6 @@ function initInput(){
         down: game.input.keyboard.addKey(Phaser.Keyboard.DOWN),
 		enter: game.input.keyboard.addKey(Phaser.Keyboard.ENTER),
 		menu: game.input.keyboard.addKey(Phaser.Keyboard.S),
+		space: game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR)
 	};
 }
