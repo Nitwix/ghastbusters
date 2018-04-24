@@ -1,7 +1,7 @@
 let player;
 let map,layer;
 let enemies;
-let ennemy1;
+let enemy1;
 var gameState = {
     create: function(){
         initInput();
