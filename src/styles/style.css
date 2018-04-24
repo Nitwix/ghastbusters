@@ -8,3 +8,7 @@ body{
 td{
     border: solid #c8e4b3 1px;
 }
+
+a{
+    text-decoration: none;
+}

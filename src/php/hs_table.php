@@ -1,5 +1,5 @@
 <?php
-$sql = "select * from highscores";
+$sql = "SELECT * FROM highscores ORDER BY score desc";
 
 $result = $conn->query($sql);
 
