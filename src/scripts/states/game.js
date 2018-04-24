@@ -1,5 +1,6 @@
 let player;
 let map,layer;
+let enemy1;
 var gameState = {
     create: function(){
         initInput();
@@ -35,11 +36,15 @@ var gameState = {
         layer.resizeWorld();
         map.setCollisionByExclusion([], true, layer);
 
+        enemy1 = new Enemy(game, 50, 10, "ghast", 0, player);
+
 
     },
     update: function(){
         game.physics.arcade.collide(player,layer);
         player.body.velocity.x=0;
+
+        enemy1.update();
 
         if(input.left.isDown){
             player.body.velocity.x = -player.data.xVelocity;

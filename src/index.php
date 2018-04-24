@@ -16,6 +16,8 @@
 
     <script src="../node_modules/phaser-ce/build/phaser.js"/></script>
 
+    <script src="scripts/classes/enemy.js"></script>
+
     <script src="scripts/states/preload.js"></script>
     <script src="scripts/states/mainMenu.js"></script>
     <script src="scripts/states/game.js"></script>
