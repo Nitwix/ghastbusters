@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ghastbusters!</title>
+    <?php require 'php/head.php' ?>
 </head>
 <body>
     <div id="canvas-container"></div>
 
-    <script src="../node_modules/phaser-ce/build/phaser.js"/></script>
+    <form action="php/add_hs.php" method="post">
+        <input type="text" name="pseudo" value="pseudo1">
+        <input type="hidden" name="score" value="42">
+        <input type="hidden" name="temps" value="4200">
+        <input type="submit" value="Envoyer!">
+    </form>
+    
 
+    <script src="../node_modules/phaser-ce/build/phaser.js"/></script>
 
     <script src="scripts/states/preload.js"></script>
     <script src="scripts/states/mainMenu.js"></script>

@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ghastbusters</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <?php require 'php/head.php' ?>
 </head>
 <body>
 
@@ -16,6 +12,8 @@
 <table>
     <?php require 'php/hs_table.php'?>
 </table>
+
+<a href="index.php">Retour au jeu</a>
 
 </body>
 </html>
