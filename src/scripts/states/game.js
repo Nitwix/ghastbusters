@@ -1,6 +1,7 @@
 let player;
 let map,layer;
 let enemy1;
+let TimeManager = new TimeManager;
 var gameState = {
     create: function(){
         initInput();
