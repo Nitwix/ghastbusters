@@ -6,7 +6,8 @@ class TimeMgr {
         this.tpsText;
     }
     start(){
-        this.tpsText = game.add.text(32,32,"temps");
+        this.tpsText = game.add.text(32,32,"Temps :", {fill:'white', fontSize:25});
+        this.tpsText.bringToTop();
         this.tpsText.fixedToCamera = true;
         this.cmptTot.start();
     }
