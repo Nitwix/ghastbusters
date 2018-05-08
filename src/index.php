@@ -19,6 +19,7 @@
     <script src="scripts/classes/enemy.js"></script>
     <script src="scripts/classes/enemies.js"></script>
     <script src="scripts/classes/stateMgr.js"></script>
+    <script src="scripts/classes/timeMgr.js"></script>
 
     <script src="scripts/states/preload.js"></script>
     <script src="scripts/states/mainMenu.js"></script>

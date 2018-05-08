@@ -7,7 +7,7 @@ class TimeManager {
     }
     addTime(){
         this.tpsRestant += 0.9*this.tpsAjout;
-        this.tpsAjout = 0.9.this.tpsAjout;
+        this.tpsAjout = 0.9*this.tpsAjout;
     }
 
     start(){
