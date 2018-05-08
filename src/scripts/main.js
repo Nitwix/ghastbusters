@@ -13,4 +13,4 @@ game.state.add("mainMenu", mainMenuState);
 game.state.add("game",gameState);
 game.state.add("gameOver", gameOverState);
 
-game.state.start("gameOver");
+game.state.start("preload");

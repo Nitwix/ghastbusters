@@ -17,6 +17,7 @@ class TimeMgr {
 
     addTime(){
         this.timeAddition*=0.9;
+        console.log(this.timeAddition);
         this.waveTime += this.timeAddition;
     }
 

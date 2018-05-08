@@ -30,7 +30,6 @@ var gameState = {
 
         if(enemies.waveFinished){
             stateMgr.initWave();
-            timeMgr.addTime();
         }
     },
 };
