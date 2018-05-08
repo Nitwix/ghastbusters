@@ -17,6 +17,11 @@ class Enemies extends Phaser.Group{
             let rPos = availPos[rIndex];
             availPos.splice(rIndex, 1);
             let enemy = new Enemy(game, rPos[0], rPos[1], "ghast", 0, this.player);
+            this.add(enemy);
         }
+    }
+
+    updateEnemies(){
+        this.callAll("updateEnemy");
     }
 }

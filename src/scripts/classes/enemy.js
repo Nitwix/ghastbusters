@@ -10,7 +10,7 @@ class Enemy extends Phaser.Sprite{
         game.add.existing(this);
     }
 
-    update(){
+    updateEnemy(){
         if(this.alive && this.overlap(this.player)){
             this.kill();
         }
