@@ -21,9 +21,10 @@ class TimeMgr {
     }
 
     update(){
-        console.log(this.waveTime);
+        this.tpsText.text = "Temps : " + Phaser.Math.roundTo(this.waveTime-this.cmptTot.seconds, -2);
         if(this.waveTime-this.cmptTot.seconds<=0){
-            console.log("Game over");
+            game.state.start("gameOver");
+
         }
     }
 }
